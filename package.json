@@ -1,0 +1,46 @@
+{
+  "displayName": "NodeJS demon for Edisio Plugin of Jeedom",
+  "name": "jeedom-plugin-edisio-node",
+  "version": "0.0.1",
+  "description": "Handle read and write data from Edisio USB key for Jeedom",
+  "license": "Apache-2.0",
+  "author": "Fanta759",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fanta759/jeedom-plugin-edisio-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fanta759/jeedom-plugin-edisio-node/issues"
+  },
+  "engines": {
+    "node": ">=10.17.0"
+  },
+  "main": "dist/cli.js",
+  "scripts": {
+    "lint": "eslint src/**.ts",
+    "watch": "npm run build && nodemon",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "Jeedom-Plugin-Edisio-Node",
+    "Jeedom",
+    "Edisio"
+  ],
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "serialport": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "@types/serialport": "^8.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
+    "eslint": "^7.1.0",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  }
+}
